@@ -2,6 +2,7 @@ let nextBtn = document.querySelector('#next')
 let prevBtn = document.querySelector('#prev')
 let slider = document.querySelector('.sliders')
 let sliderList = slider.querySelector('.sliders .list')
+let sliderItems = document.querySelectorAll('.sliders .list .item')
 
 nextBtn.addEventListener('click', () => {
     showSlider('next')
@@ -24,7 +25,7 @@ let showSlider = (direction) => {
     }
 
     clearInterval(autoNext)
-    let autoNext = setInterval(() => {
+    autoNext = setInterval(() => {
         next.click()
     }, 4000)
 
